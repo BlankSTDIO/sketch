@@ -10,7 +10,7 @@ environment:
 
 dependencies:
   sketch:
-    path: ../
+    git: https://github.com/BlankSTDIO/sketch.git
   flutter:
     sdk: flutter
 

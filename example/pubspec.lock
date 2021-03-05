@@ -30,9 +30,11 @@ packages:
   sketch:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: "086faefb73b7b0a77b2e486fe1d12900c9c47b1e"
+      url: "https://github.com/BlankSTDIO/sketch.git"
+    source: git
     version: "0.0.1"
   sky_engine:
     dependency: transitive
