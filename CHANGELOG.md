@@ -1,3 +1,4 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1] - Initial Alpha Release
+Warning: Only tested on Windows
 
-* TODO: Describe initial release.
+* Added initial api for creating a Sketch, running that sketch and rendering every frame to png files.

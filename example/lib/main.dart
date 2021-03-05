@@ -1,12 +1,4 @@
-# sketch
 
-A simple way to create sketches. This is (as of now) not intended to be used inside a normal flutter application. sketch does not support the rendering structure of normal Widgets and is instead intended to be used on its own isolated from any other app structure. This might change in the future.
-
-## Getting Started
-
-Here is what a sketch might look like:
-
-```dart
 import 'package:sketch/sketch.dart';
 
 class MySketch implements Sketch {
@@ -33,4 +25,3 @@ class MySketch implements Sketch {
 
 
 main() => runSketch(MySketch());
-```
