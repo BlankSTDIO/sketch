@@ -3,7 +3,8 @@ description: A new Flutter package project.
 version: 0.0.1
 authors:
   - ErikWDev@gmail.com
-homepage: https://www.github.com/ErikWDev/sketch
+homepage: https://www.github.com/BlankSTDIO/sketch
+repository: https://www.github.com/BlankSTDIO/sketch
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
