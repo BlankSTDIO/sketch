@@ -1,7 +1,8 @@
 name: sketch
 description: A new Flutter package project.
 version: 0.0.1
-author: ErikWDev
+authors:
+  - ErikWDev
 homepage: https://www.github.com/ErikWDev/sketch
 
 environment:
