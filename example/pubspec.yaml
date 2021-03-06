@@ -9,6 +9,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  complex: ^0.6.1
   sketch:
     git: https://github.com/BlankSTDIO/sketch.git
   flutter:
