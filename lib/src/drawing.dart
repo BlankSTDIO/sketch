@@ -3,26 +3,37 @@ import 'dart:typed_data' show Float64List;
 import 'dart:ui';
 import 'sketch.dart';
 
-Paint latestStyle = Paint();
+Paint currentStyle = Paint();
+
+void setStyle(Paint style) {
+  if(style == null) return;
+
+  currentStyle = style;
+}
 
 void fill([Paint style]) {
+  setStyle(style);
   currentCanvas.drawPaint(style);
 }
 
 void circle(num x, num y, num radius, [Paint style]) {
-  currentCanvas.drawCircle(Offset(x.toDouble(), y.toDouble()), radius.toDouble(), style);
+  setStyle(style);
+  currentCanvas.drawCircle(Offset(x.toDouble(), y.toDouble()), radius.toDouble(), currentStyle);
 }
 
 void arc(num x, num y, num radius, num startAngle, num sweepAngle, [Paint style]) {
-  currentCanvas.drawArc(Offset(x.toDouble(), y.toDouble()) & Size(radius.toDouble(), radius.toDouble()), startAngle.toDouble(), sweepAngle.toDouble(), true, style);
+  setStyle(style);
+  currentCanvas.drawArc(Offset(x.toDouble(), y.toDouble()) & Size(radius.toDouble(), radius.toDouble()), startAngle.toDouble(), sweepAngle.toDouble(), true, currentStyle);
 }
 
 void rectangle(num x, num y, num width, num height, [Paint style]) {
-  currentCanvas.drawRect(Offset(x.toDouble(), y.toDouble()) & Size(width.toDouble(), height.toDouble()), style);
+  setStyle(style);
+  currentCanvas.drawRect(Offset(x.toDouble(), y.toDouble()) & Size(width.toDouble(), height.toDouble()), currentStyle);
 }
 
 void roundedRectangle(num x, num y, num width, num height, num cornerRadius, [Paint style]) {
-  currentCanvas.drawRRect(RRect.fromRectAndRadius(Offset(x.toDouble(), y.toDouble()) & Size(width.toDouble(), height.toDouble()), Radius.circular(cornerRadius.toDouble())), style);
+  setStyle(style);
+  currentCanvas.drawRRect(RRect.fromRectAndRadius(Offset(x.toDouble(), y.toDouble()) & Size(width.toDouble(), height.toDouble()), Radius.circular(cornerRadius.toDouble())), currentStyle);
 }
 
 void save() => currentCanvas.save();
@@ -31,4 +42,8 @@ void rotate(num radians) => currentCanvas.rotate(radians);
 void translate(num dx, num dy) => currentCanvas.translate(dx.toDouble(), dy.toDouble());
 void skew(num sx, sy) => currentCanvas.skew(sx, sy);
 void transform(Float64List matrix4) => currentCanvas.transform(matrix4);
-void saveLayer(Rect bounds, [Paint style]) => currentCanvas.saveLayer(bounds, style);
+
+void saveLayer(Rect bounds, [Paint style]) {
+  setStyle(style);
+  currentCanvas.saveLayer(bounds, currentStyle);
+}
