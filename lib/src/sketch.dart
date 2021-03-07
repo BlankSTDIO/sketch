@@ -11,8 +11,9 @@ abstract class Sketch {
 }
 
 late Sketch userSketch;
-bool isFirstTime = true;
 late Canvas currentCanvas;
+
+bool isFirstTime = true;
 
 void runSketch(Sketch sketchToRun) {
   userSketch = sketchToRun;

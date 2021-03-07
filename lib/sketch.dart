@@ -1,7 +1,5 @@
 library sketch;
 
-import 'package:flutter/cupertino.dart';
-
 export 'src/sketch.dart' show Sketch, runSketch, renderSketch;
 export 'src/drawing.dart';
 
