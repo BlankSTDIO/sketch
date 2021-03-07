@@ -37,11 +37,9 @@ packages:
   sketch:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "8f675a7ba67b50a264d6d1c61fdd0dd252f341e5"
-      url: "https://github.com/BlankSTDIO/sketch.git"
-    source: git
+      path: ".."
+      relative: true
+    source: path
     version: "0.0.1"
   sky_engine:
     dependency: transitive
@@ -63,5 +61,5 @@ packages:
     source: hosted
     version: "2.1.0"
 sdks:
-  dart: ">=2.12.0-0 <3.0.0"
+  dart: ">=2.12.0 <3.0.0"
   flutter: ">=1.17.0"

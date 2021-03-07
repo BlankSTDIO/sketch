@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:sketch/sketch.dart';
 import 'dart:math';
 
-class MySketch implements Sketch {
+class MySketch extends Sketch {
   void start() {
 
   }
@@ -41,4 +41,4 @@ class MySketch implements Sketch {
 }
 
 
-main() => runSketch(MySketch());
+main() => runApp(MySketch());

@@ -1,23 +1,26 @@
 
 
 
+import 'package:flutter/widgets.dart';
 import 'package:sketch/sketch.dart';
 
-class MySketch implements Sketch {
-  double t = 0.0;
-
+class MySketch extends Sketch {
+  @override
   void start() {
 
   }
 
+  @override
   void update() {
-    fill(Paint().. color = Colors.red);
-    setStyle(Paint().. color = Colors.orange);
+    fill(Paint()..color = Colors.orange);
+    setStyle(Paint()..color = Colors.red);
 
-    rectangle(10 + t, 10, 100, 100);
-    circle(190, 90 + t, 50);
-    t += 0.1;
+    circle(40, 40, 20);
+
+    pointers.forEach((key, position) {
+      circle(position.dx, position.dy, 60);
+    });
   }
 }
 
-main() => runSketch(MySketch());
+main() => runApp(MySketch());
