@@ -10,9 +10,9 @@ abstract class Sketch {
   void update();
 }
 
-Sketch userSketch;
+late Sketch userSketch;
 bool isFirstTime = true;
-Canvas currentCanvas;
+late Canvas currentCanvas;
 
 void runSketch(Sketch sketchToRun) {
   userSketch = sketchToRun;

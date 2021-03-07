@@ -39,7 +39,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "086faefb73b7b0a77b2e486fe1d12900c9c47b1e"
+      resolved-ref: "8f675a7ba67b50a264d6d1c61fdd0dd252f341e5"
       url: "https://github.com/BlankSTDIO/sketch.git"
     source: git
     version: "0.0.1"

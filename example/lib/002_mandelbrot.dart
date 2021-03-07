@@ -23,6 +23,7 @@ class MySketch implements Sketch {
   }
 
   void update() {
+    fill(Paint()..color = Colors.black);
     var w = 1.0;
     var res = 100.0;
 
